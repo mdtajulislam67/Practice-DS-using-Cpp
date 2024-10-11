@@ -36,9 +36,9 @@ void print_linked_list(Node *head)
 
 void delete_val(Node *&head, int x)
 {
-    if(head->val == x)
+    if (head->val == x)
     {
-        Node* deletenode = head;
+        Node *deletenode = head;
         head = head->next;
         delete deletenode;
         return;
@@ -47,9 +47,9 @@ void delete_val(Node *&head, int x)
     Node *tmp = head;
     while (tmp->next != NULL)
     {
-        if(tmp->next->val == x)
+        if (tmp->next->val == x)
         {
-            Node* deletenode = tmp->next;
+            Node *deletenode = tmp->next;
             tmp->next = tmp->next->next;
             delete deletenode;
             break;
@@ -72,8 +72,8 @@ int main()
     }
     int x;
     cin >> x;
-    
-    delete_val(head,x);
+
+    delete_val(head, x);
     print_linked_list(head);
     return 0;
 }
